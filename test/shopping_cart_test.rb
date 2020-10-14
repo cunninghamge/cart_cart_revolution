@@ -11,9 +11,12 @@ class ShoppingCartTest < Minitest::Test
   def test_it_exists
     assert_instance_of ShoppingCart, @cart
   end
-  # assert_equal "King Soopers", @cart.name
-  # assert_equal 30, @cart.capacity
-  # assert_equal [], @cart.products
+
+  def test_attributes
+    assert_equal "King Soopers", @cart.name
+    assert_equal 30, @cart.capacity
+    assert_equal [], @cart.products
+  end
 
   # product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
   # product2 = Product.new(:meat, 'chicken', 4.50, '2')

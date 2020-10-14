@@ -74,12 +74,10 @@ class ShoppingCartTest < Minitest::Test
   end
 
   def test_sorted_products_by_quantity
-    skip
     @cart.add_product(@product1)
     @cart.add_product(@product2)
     @cart.add_product(@product3)
     @cart.add_product(@product4)
-
     assert_equal [@product4, @product1, @product2, @product3], @cart.sorted_products_by_quantity
   end
 

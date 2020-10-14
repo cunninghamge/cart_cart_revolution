@@ -30,7 +30,6 @@ class ProductTest < Minitest::Test
   end
 
   def test_it_can_get_total_price
-    skip
     product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
     product2 = Product.new(:meat, 'chicken', 4.50, '2')
 

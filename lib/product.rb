@@ -7,4 +7,8 @@ class Product
     @unit_price = unit_price
     @quantity = quantity.to_i
   end
+
+  def total_price
+    @unit_price * @quantity
+  end
 end

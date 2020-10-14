@@ -66,7 +66,6 @@ class ShoppingCartTest < Minitest::Test
   end
 
   def test_percentage_occupied
-    skip
     @cart.add_product(@product1)
     @cart.add_product(@product2)
     @cart.add_product(@product3)

@@ -42,6 +42,12 @@ class ProductTest < Minitest::Test
 
     assert_equal false, product.is_hoarded?
   end
-    #product.hoard
-  # assert_equal true, product.is_hoarded?
+
+  def test_hoard
+    product = Product.new(:paper, 'toilet paper', 3.70, '10')
+
+    product.hoard
+
+    assert_equal true, product.is_hoarded?
+  end
 end

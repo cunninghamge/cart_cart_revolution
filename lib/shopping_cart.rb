@@ -51,7 +51,6 @@ class ShoppingCart
         breakdown[product.category] << product
       else
         breakdown[product.category] = [product]
-        breakdown[product.category].to_a
       end
     end
     breakdown

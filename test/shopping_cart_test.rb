@@ -43,7 +43,6 @@ class ShoppingCartTest < Minitest::Test
   end
 
   def test_is_full?
-    skip
     assert_equal false, @cart.is_full?
 
     @cart.add_product(@product1)
@@ -58,7 +57,6 @@ class ShoppingCartTest < Minitest::Test
   end
 
   def test_products_by_category
-    skip
     @cart.add_product(@product1)
     @cart.add_product(@product2)
     @cart.add_product(@product3)

@@ -8,7 +8,9 @@ class ShoppingCartTest < Minitest::Test
     @cart = ShoppingCart.new("King Soopers", "30items")
   end
 
-  # assert_instance_of ShoppingCart, @cart
+  def test_it_exists
+    assert_instance_of ShoppingCart, @cart
+  end
   # assert_equal "King Soopers", @cart.name
   # assert_equal 30, @cart.capacity
   # assert_equal [], @cart.products

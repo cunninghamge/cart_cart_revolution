@@ -10,6 +10,8 @@ class ShoppingCartTest < Minitest::Test
     @product2 = Product.new(:meat, 'chicken', 4.50, '2')
     @product3 = Product.new(:paper, 'tissue paper', 1.25, '1')
     @product4 = Product.new(:produce, 'apples', 0.99, '20')
+    @product5 = Product.new(:produce, 'carrots', 0.25, '5')
+    @product6 = Product.new(:bakery, 'bagels', 1.65, '12')
   end
 
   def test_it_exists
@@ -88,6 +90,12 @@ class ShoppingCartTest < Minitest::Test
     @cart.add_product(@product4)
 
     expected = {:meat=> [@product2], :paper=> [@product1, @product3], :produce=> [@product4]}
+    assert_equal expected, @cart.product_breakdown
+
+    @cart.add_product(@product5)
+    @cart.add_product(@product6)
+
+    expected = {:bakery=> [@product6], :meat=> [@product2], :paper=> [@product1, @product3], :produce=> [@product4, @product5]}
     assert_equal expected, @cart.product_breakdown
   end
 end

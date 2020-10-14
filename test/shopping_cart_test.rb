@@ -82,13 +82,12 @@ class ShoppingCartTest < Minitest::Test
   end
 
   def test_product_breakdown
-    skip
     @cart.add_product(@product1)
     @cart.add_product(@product2)
     @cart.add_product(@product3)
     @cart.add_product(@product4)
 
-    expected = {:meat=> [@product4], :paper=> [@product1, @product2], :produce=> [@product3]}
-    assert_equal expected, @card.product_breakdown
+    expected = {:meat=> [@product2], :paper=> [@product1, @product3], :produce=> [@product4]}
+    assert_equal expected, @cart.product_breakdown
   end
 end

@@ -43,4 +43,17 @@ class ShoppingCart
       -product.quantity
     end
   end
+
+  def product_breakdown
+    breakdown = {}
+    @products.each do |product|
+      if breakdown.key?(product.category)
+        breakdown[product.category] << product
+      else
+        breakdown[product.category] = [product]
+        breakdown[product.category].to_a
+      end
+    end
+    breakdown
+  end
 end

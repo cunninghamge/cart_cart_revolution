@@ -18,10 +18,13 @@ class ShoppingCartTest < Minitest::Test
     assert_equal [], @cart.products
   end
 
-  # product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
-  # product2 = Product.new(:meat, 'chicken', 4.50, '2')
-  # @cart.add_product(product1)
-  # @cart.add_product(product2)
-  # assert_equal [product1, product2], @cart.products
+  def test_add_products
+    product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
+    product2 = Product.new(:meat, 'chicken', 4.50, '2')
+    @cart.add_product(product1)
+    @cart.add_product(product2)
+
+    assert_equal [product1, product2], @cart.products
+  end
   # assert_equal {name: "King Soopers", capacity: 30}, @cart.details
 end
